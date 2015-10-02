@@ -28,3 +28,5 @@
  gem 'jquery-rails'
  # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
  gem 'turbolinks'
+ # BootStrap allows for CSS using a Grid System
+ gem 'bootstrap-sass'
