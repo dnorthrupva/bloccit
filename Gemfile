@@ -12,6 +12,7 @@
  # #2
  group :development do
    gem 'sqlite3'
+   gem 'pry-rails'
  end
  
  group :development, :test do
@@ -30,3 +31,4 @@
  gem 'turbolinks'
  # BootStrap allows for CSS using a Grid System
  gem 'bootstrap-sass'
+ 
