@@ -1,7 +1,7 @@
 include RandomData
 
 50.times do
-    
+
     Post.create!(
         title: RandomData.random_sentence,
         body: RandomData.random_paragraph
@@ -14,11 +14,23 @@ posts = Post.all
         body: RandomData.random_paragraph
         )
 end
+
+50.times do
+
+  Advertisement.create!(
+  title: RandomData.random_sentence,
+  copy: RandomData.random_paragraph,
+  price: rand(0..100)
+  )
+end
+
 puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
+puts "#{Advertisement.count} Ads Created!"
 
 
 Post.find_or_create_by(title: "Hello, everyone!", body: "Teodoro here!")
 puts "#{Post.count} posts created!"
-
+Advertisement.find_or_create_by(title: "Ad #1!", copy: "Yessir", price: 4)
+puts "#{Advertisement.count} ads created!"
