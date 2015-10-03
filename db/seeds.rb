@@ -17,3 +17,8 @@ end
 puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
+
+
+Post.find_or_create_by(title: "Hello, everyone!", body: "Teodoro here!")
+puts "#{Post.count} posts created!"
+
