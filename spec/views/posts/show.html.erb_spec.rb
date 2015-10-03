@@ -1,5 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "posts/show.html.erb", type: :view do
-  pending "add some examples to (or delete) #{__FILE__}"
+    if Post.ID % 5 == 0
+        Post.title = "SPAM"
+    end
 end
