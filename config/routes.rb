@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'advertisements/index'
 
+  resources :questions
   resources :posts
   resources :advertisements
 
