@@ -16,7 +16,7 @@
  end
 
  group :development, :test do
-   gem 'shoulda-matchers'
+   gem 'shoulda-matchers', '~> 3.0'
    gem 'rspec-rails', '~> 3.0'
  end
 
