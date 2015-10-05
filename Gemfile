@@ -32,3 +32,5 @@
  gem 'turbolinks'
  # BootStrap allows for CSS using a Grid System
  gem 'bootstrap-sass'
+ #Used for encrypting passwords
+ gem 'bcrypt'
