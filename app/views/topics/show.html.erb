@@ -19,8 +19,10 @@
           </h4>
           <h3>
             Sponsored Post:
-            <%= link_to sponsored_post.title, topic_sponsored_post_path(@topic) %>
+            <% @topic.sponsored_posts.each do |sponsored_post| %>
+            <%= link_to sponsored_post.title, topic_sponsored_post_path(@topic, sponsored_post) %>
           </h3>
+          <% end %>
         </div>
       </div>
     <% end %>
