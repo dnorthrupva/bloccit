@@ -17,15 +17,21 @@
              <%= post.comments.count %> Comments
            </small>
           </h4>
-          <h3>
-            Sponsored Post:
-            <% @topic.sponsored_posts.each do |sponsored_post| %>
-            <%= link_to sponsored_post.title, topic_sponsored_post_path(@topic, sponsored_post) %>
-          </h3>
-          <% end %>
+         
         </div>
       </div>
     <% end %>
+     <h3>
+            Sponsored Post:
+     </h3>
+            <ol>
+            <% @topic.sponsored_posts.each do |sponsored_post| %>
+            <br>
+            <li>
+            <%= link_to sponsored_post.title, topic_sponsored_post_path(@topic, sponsored_post) %>
+            </li>
+            <% end %>
+            </ol>
   </div>
   <div class="col-md-4">
     <%= link_to "New Post", new_topic_post_path(@topic), class: 'btn btn-success' %>
