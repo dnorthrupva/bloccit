@@ -18,13 +18,14 @@ topics = Topic.all
     )
 end
 posts = Post.all
+#Create Comments
 100.times do
-    Comment.create!(
+        Comment.create!(
         post: posts.sample,
         body: RandomData.random_paragraph
         )
 end
-
+#Create Ads
 50.times do
 
   Advertisement.create!(
@@ -33,6 +34,7 @@ end
   price: rand(0..100)
   )
 end
+#Create Questions
 20.times do
 
   Question.create!(
@@ -41,12 +43,24 @@ end
   resolved: false
   )
 end
+#Create Sponsored_Post
+50.times do
+
+        SponsoredPost.create!(
+        title: RandomData.random_sentence,
+        body: RandomData.random_sentence,
+        price: rand(0..100)
+    )
+end
+
+
 puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Topic.count} topics created!"
 puts "#{Comment.count} comments created"
 puts "#{Advertisement.count} Ads Created!"
 puts "#{Question.count} Questions created!"
+puts "#{SponsoredPost.count} SponsoredPost Added!"
 
 
 Post.find_or_create_by(title: "Hello, everyone!", body: "Teodoro here!")
