@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   end
 
   get 'about' => 'welcome#about'
+  get 'faw' => 'welcome#faq'
   root to: 'welcome#index'
 
 end
