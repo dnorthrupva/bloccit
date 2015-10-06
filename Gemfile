@@ -16,13 +16,9 @@
  end
 
  group :development, :test do
+   gem 'shoulda-matchers', '~> 3.0'
    gem 'rspec-rails', '~> 3.0'
  end
- 
- group :test do
-  gem 'minitest'
-  gem 'shoulda-matchers'
-end
 
  # Use SCSS for stylesheets
  gem 'sass-rails', '~> 5.0'

@@ -1,0 +1,10 @@
+<div class="confirmation">Sign Up Confirmation</div>
+<div class="confirmMsg">Are you sure these values are correct?</div>
+<div class="emailName">Email: <%= params[:user][:email] %>
+</div><div class="name">
+Name: <%= params[:user][:name] %>
+</div>
+<ul class="confirmUL">
+    <li><%= button_to "Yes", {:controller => "users", :action => "create", :params => params}, class: 'btn btn-success confirmYes' %></li>
+    <li><%= button_to "No", new_user_path, :method => :get, class: 'btn btn-failure confirmNo' %></li>
+</ul>
