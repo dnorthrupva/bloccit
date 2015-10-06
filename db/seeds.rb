@@ -73,7 +73,7 @@ end
 
  user = User.first
  user.update_attributes!(
-   email: 'dnorthrup25@gmail.com', 
+   email: 'dnorthrupva@gmail.com', 
    password: 'helloworld'
  )
 
