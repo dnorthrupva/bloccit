@@ -7,7 +7,7 @@ RSpec.describe SponsoredPostsController, type: :controller do
   
   describe "GET #show" do
     it "returns http success" do
-      get :show
+      get :show, {id: my_sponsored_post.id, topic_id: my_topic.id}
       expect(response).to have_http_status(:success)
     end
   end
