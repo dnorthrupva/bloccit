@@ -9,31 +9,15 @@
   <div class="col-md-8">
     <p class="lead"><%= @topic.description %></p>
     <% @topic.posts.each do |post| %>
-      <div class="media">
-        <div class="media-body">
-          <h4 class="media-heading">
-            <%= link_to post.title, topic_post_path(@topic, post) %>
-           </h4>
-           <small>
-             submitted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.name %> <br>
-             <%= post.comments.count %> Comments
-           </small>
-          </h4>
-         
-        </div>
-      </div>
+      <%= render partial: 'posts/post', locals: { post: post } %>
     <% end %>
      <h3>
             Sponsored Post:
      </h3>
-            <ol>
+        
             <% @topic.sponsored_posts.each do |sponsored_post| %>
-            <br>
-            <li>
-            <%= link_to sponsored_post.title, topic_sponsored_post_path(@topic, sponsored_post) %>
-            </li>
+                <%= render partial: 'sponsored_posts/sponsoredpost', locals: { sponsored_post: sponsored_post } %>
             <% end %>
-            </ol>
   </div>
  <% if current_user %>
   <div class="col-md-4">

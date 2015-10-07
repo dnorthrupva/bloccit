@@ -10,6 +10,7 @@ RSpec.describe User, type: :model do
    
  
    # Shoulda tests for email
+   it { should have_many(:comments) }
    it { should validate_presence_of(:email) }
    it { should validate_uniqueness_of(:email) }
    it { should validate_length_of(:email).is_at_least(3) }
