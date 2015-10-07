@@ -86,6 +86,13 @@ end
    password: 'helloworld'
  )
 
+# Create a Mod
+member = User.create!(
+    name:   'Mod User',
+    email:   'mod@example.com',
+    password: 'helloworld',
+    role:       'moderator'
+    )
 
 puts "Seed finished"
 puts "#{User.count} users created"
