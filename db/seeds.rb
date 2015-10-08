@@ -6,7 +6,8 @@ include RandomData
  # #3
    name:     RandomData.random_name,
    email:    RandomData.random_email,
-   password: RandomData.random_sentence
+   password: RandomData.random_sentence,
+   role: 'member'
    )
  end
  users = User.all
