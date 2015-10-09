@@ -7,14 +7,18 @@
  <% end %>
 <div class="row">
   <div class="col-md-8">
-    <p class="lead"><%= @topic.description %></p>
+    <p class="lead">
+       <%= render partial: "labels/list", locals: { labels: @topic.labels } %>
+       <br />
+       <%= @topic.description %>
+     </p>
     <% @topic.posts.each do |post| %>
       <%= render partial: 'posts/post', locals: { post: post } %>
     <% end %>
      <h3>
             Sponsored Post:
      </h3>
-        
+
             <% @topic.sponsored_posts.each do |sponsored_post| %>
                 <%= render partial: 'sponsored_posts/sponsoredpost', locals: { sponsored_post: sponsored_post } %>
             <% end %>
