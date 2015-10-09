@@ -15,8 +15,9 @@
    <% end %>
    <%= form_group_tag(topic.errors[:description]) do %>
      <%= f.label :description %>
-     <%= f.text_area :description, rows: 8, class: 'form-control', placeholder: "Enter topic name" %>
+     <%= f.text_area :description, rows: 8, class: 'form-control', placeholder: "Enter topic description" %>
    <% end %>
+     <%= render partial: 'labels/form', locals: { f: f, labels: @topic.labels } %>
    <div class="form-group">
      <%= f.submit "Save", class: 'btn btn-success' %>
    </div>
