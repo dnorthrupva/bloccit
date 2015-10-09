@@ -6,9 +6,11 @@ class Post < ActiveRecord::Base
   has_many :votes, dependent: :destroy
   has_many :labelings, as: :labelable
   has_many :labels, through: :labelings
+  has_many :favorites, dependent: :destroy
   after_create :create_vote
     
     default_scope { order('rank DESC') }
+    scope :visible_to, -> (user) { user ? all : joins(:topic).where('topics.public' => true) }
     scope :ordered_by_title, -> { order(:title)  }
     scope :ordered_by_reverse_created_at, -> { order('created_at ASC')  }
  
