@@ -19,13 +19,20 @@
     </div>
   </div>
 
-<% if @user.posts.empty? %>
-<h2><%= "#{@user.name}" %> hasn't made any posts, yet! </h2>
+<% if @user.posts.empty? && @user.comments.empty? %>
+<h2><%= "#{@user.name}" %> hasn't made any post or comments, yet! </h2>
 <% else %>
 <h2>Posts</h2>
+
+<% if @user.posts.empty? %>
+<%= "#{@user.name}" %> hasn't made any posts, yet.
+<% else %>
 <%= render @user.posts %>
-
+<% end %>
 <h2>Comments</h2>
+<% if @user.comments.empty? %>
+<%= "#{@user.name}" %> hasn't made any comments.
+<% else %>
 <%= render @user.comments %>
-
+<% end %>
 <% end %>
