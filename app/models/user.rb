@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
    has_many :favorites, dependent: :destroy
    before_save { self.email = email.downcase }
    before_save { self.name = name.split(' ').map(&:capitalize).join(' ') }
+   before_create { self.role = 'member' }
    EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
    validates :name, length: { minimum: 1, maximum: 100 }, presence: true
    validates :password, presence: true, length: { minimum: 6 }, if: "password_digest.nil?"

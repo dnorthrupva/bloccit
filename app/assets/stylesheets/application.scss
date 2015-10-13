@@ -1,6 +1,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+@import "font-awesome";
+body {
+    background-image: image-url("MTGBG.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.fa-twitter {
+    color: #4099FF;
+}
 .social-btn {
     color: #00aced;
     height: 20px;
