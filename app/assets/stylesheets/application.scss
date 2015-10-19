@@ -1,17 +1,80 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@font-face {
+    font-family: 'Magic';
+    src:font-url('MAGIC.TTF') format('truetype');
+    font-weight:normal;
+    font-style: normal;
+}
+@font-face{
+   font-family: 'Quicksand';
+   src:  url('https://fonts.googleapis.com/css?family=Quicksand:700');   
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face{
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css?family=Roboto');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
-    background-image: image-url("MTGBG.jpg");
-    background-repeat: no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), image-url('MTGBG.jpg');
+     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    color: white;
+}
+.magicFont {
+    font-family: Magic;
+}
+.aboutWrap{
+    text-align: center;
+}
+.aboutWrap a{
+    color: blue;
+}
+button {
+    font-family: Serif;
+    font-size: 18px;
+    border-radius: 15px;
+    color: #4099FF;
+}
+.button[disabled], .button[disabled]:hover, .button[disabled]:focus, .button[disabled]:active {
+    transform: scale(0) !important;
+    text-decoration: none;
+    border: 0px;
+}
+.navHeaders{
+    font-size: 50px;
+    border: 0px;
+    font-family: Roboto;
+    }
+.navHeaders a {
+    color: green;
+    background: none !important; 
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.search {
+    color: yellow;
+}
+.navHeaders a:hover{
+    color: darkblue;
+    transform: scale(1.2);
+    background-color: transparent; 
+    text-decoration: none; 
+    background: rgba(255, 255, 255, 0.3);
+}
+a {
+    color: red;
 }
 .fa-twitter {
     color: #4099FF;
 }
 .social-btn {
-    color: #00aced;
+    color: #4099FF;
     height: 20px;
     padding: 5px 5px;
     width: 100px;
@@ -72,6 +135,7 @@ body {
     color: blue;
     font-weight: bold;
     font-size: 18px;
+    font-family: Quicksand;
 }
 
 .vote-arrows {

@@ -10,10 +10,11 @@
 </head>
 <body>
   <div class="container">
-    <ul class="nav nav-tabs">
-    <li><%= link_to "Home", root_path %></li>
-    <li><%= link_to "Cards", topics_path %></li>
-    <li><%= link_to "Contact", about_path %></li>
+    <ul class="nav nav-transparent nav-tabs">
+    <li class='navHeaders'><%= link_to "Home", root_path %></li>
+    <li class='navHeaders'><%= link_to "Cards", topics_path %></li>
+    <li class='navHeaders'><%= link_to "Contact", about_path %></li>
+    <li class='navHeaders disabled search'><%= link_to "Card Search", about_path %></li>
     <div class="pull-right user-info">
        <% if current_user %>
     <%= image_tag User.avatar_url(current_user, 48), class: "gravatar" %>
@@ -31,7 +32,7 @@
            <%= link_to "Sign In", new_session_path %> or
            <%= link_to "Sign Up", new_user_path %>
          <% end %>
-         </div>
+    </div>
      
   </ul>
   <div class="flash">
@@ -54,7 +55,5 @@
      </div>
 <%= yield %>
 </div>
-  </div>
-
 </body>
 </html>
